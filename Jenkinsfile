@@ -2,16 +2,16 @@ pipeline {
     agent any
     
     tools {
-        jdk 'JAVA_HOME'
-        maven 'maven'
+        jdk 'jdk21'
+        maven 'Maven'
     }
     
     environment {
         // Define environment variables for Tomcat
         WAR_FILE = 'target/roshambo.war' // Path to the generated WAR file (use forward slashes)
         TOMCAT_URL = 'http://localhost:8081' // Tomcat server URL
-        TOMCAT_USER = 'test' // Tomcat Manager username
-        TOMCAT_PASSWORD = 'test' // Tomcat Manager password
+        TOMCAT_USER = 'iqra' // Tomcat Manager username
+        TOMCAT_PASSWORD = 'iqra' // Tomcat Manager password
     }
     
     stages {
